@@ -1,14 +1,14 @@
 {
     "builds": [
       {
-        "src": "enaba/wsgi.py",
+        "src": "enaba/enaba/wsgi.py",
         "use": "@vercel/python"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "enaba/wsgi.py"
+        "dest": "enaba/enaba/wsgi.py"
       }
     ]
 }
