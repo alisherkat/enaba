@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    انابه سایت جامع ادعیه و زیارات
+{% endblock %}
+{% block main %}
+    <div class="md:flex">
+        <div class="mt-8 basis-1/3 w-full">
+            <div class="grid justify-center">
+
+                <div>
+                    <img src="{% static "img/karbala.svg" %}" alt="فهرست جامع زیارت ها">
+                </div>
+
+                <div class="xl:mb-3.5 md:mb-1">
+                    <h4 class="font-lale text-2xl text-start md:text-3xl lg:text-4xl xl:text-5xl">
+                        فهرست جامع زیارات
+
+                    </h4>
+
+
+                </div>
+
+
+            </div>
+            <div class="grid">
+                {% for z in zyarat %}
+
+                    <div class="bg-amber-300 rounded-full bg-opacity-50 basis-1/5  mx-6 md:mx-8 lg:mx:10 xl:mx-12 my-2 py-1.5 text-center">
+                        <h1><a class="font-lale text-xl no-underline" href="{% url "post_view_zyarat" z.slug %}">{{ z.title }}</a>
+                        </h1>
+                    </div>
+
+                {% endfor %}
+
+
+            </div>
+        </div>
+
+
+        <div class="mt-1.5  basis-1/3 w-full">
+            <div class="grid justify-center">
+
+                <div>
+                    <img src="{% static "img/pray.svg" %}" alt="فهرست ادعیه">
+                </div>
+
+                <div class="mb-3">
+                    <h4 class="font-lale text-2xl text-start md:text-3xl lg:text-4xl xl:text-5xl">
+                        فهرست جامع ادعیه
+
+                    </h4>
+
+
+                </div>
+
+
+            </div>
+            <div class="grid">
+                {% for d in doa %}
+
+                    <div class="bg-green-300 rounded-full bg-opacity-50 basis-1/5  mx-6 md:mx-8 lg:mx:10 xl:mx-12 my-2 py-1.5 text-center">
+                        <h1><a class="font-lale text-xl no-underline" href="{% url "post_view_doa" d.slug %}">{{ d.title }}</a>
+                        </h1>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+        <div class="basis-1/3 w-full">
+            <div class="grid justify-center">
+
+                <div>
+                    <img src="{% static "img/amal.svg" %}" alt="فهرست جامع اعمال">
+                </div>
+
+                <div class="md:mb-3">
+                    <h4 class="font-lale text-2xl text-start md:text-3xl lg:text-4xl xl:text-5xl">
+                        فهرست جامع اعمال
+
+                    </h4>
+
+
+                </div>
+
+
+            </div>
+            <div class="grid">
+                {% for a in amal %}
+
+                    <div class="bg-green-300 rounded-full bg-opacity-50 basis-1/5  mx-6 md:mx-8 lg:mx:10 xl:mx-12 my-2 py-1.5 text-center">
+                        <h3><a class="font-lale text-xl no-underline" href="{% url "post_view_amal" a.slug %}">{{ a.title }}</a>
+                        </h3>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

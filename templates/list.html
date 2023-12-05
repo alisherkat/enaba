@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}
+    فهرست {{ title }}
+{% endblock %}
+{% block main %}
+    <div class="bg-{{ color }}-50 bg-blue-50 py-6 px-4 text-center">
+    <span class="text-{{ color }}-950 text-4xl font-lale">
+         فهرست {{ title }}
+    </span>
+    </div>
+    {% for obj in objs %}
+        <div class="bg-{{ color }}-100 text-center py-6 px-4">
+            <h2>
+                {% if obj.is_zyarat %}
+                    <a href="{% url "post_view_zyarat" obj.slug %}" class="text-{{ color }}-950 no-underline text-3xl font-bold font-neirizi">
+                {% else %}
+                    <a href="{% url "post_view_doa" obj.slug %}" class="text-{{ color }}-950 no-underline text-3xl font-bold font-neirizi>
+                {% endif %}
+                {{ obj.title }}
+                </a>
+
+
+            </h2>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %} {{ title }} {% endblock %}
+{% block main %}
+    <main>
+        <div class="bg-{{color}}-100 py-4 text-center">
+            <h1 class="font-lale text-4xl text-{{color}}-950">
+                {{ title }}
+            </h1>
+        </div>
+        {% for p in posts %}
+            {% if p.sub_title %}
+                <div class="bg-{{color}}-100 text-center py-2\.5">
+                    <p class="font-lale text-3xl text-{{color}}-950 leading-loose">
+                        {{ p.sub_title }}
+                    </p>
+                </div>
+            {% endif %}
+            {% if p.text %}
+                <div class="bg-{{color}}-50 py-4 px-2 ps-2 md:px-16">
+                    <p class="text-{{color}}-950 font-neirizi text-2xl leading-zyarat">
+                        {{ p.text }}
+                    </p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </main>
+{% endblock %}
