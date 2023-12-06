@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'enaba.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         "URL": "postgres://default:0sCqwVWr7gDK@ep-morning-field-33314033-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb",
         "PRISMA_URL": "postgres://default:0sCqwVWr7gDK@ep-morning-field-33314033-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb?pgbouncer=true&connect_timeout=15",
         "URL_NON_POOLING": "postgres://default:0sCqwVWr7gDK@ep-morning-field-33314033.us-east-1.postgres.vercel-storage.com:5432/verceldb",
