@@ -81,6 +81,7 @@ DATABASES = {
         "HOST": "ep-morning-field-33314033-pooler.us-east-1.postgres.vercel-storage.com",
         "PASSWORD": "0sCqwVWr7gDK",
         "DATABASE": "verceldb",
+        'PORT': 5432,
 
     }
 }
