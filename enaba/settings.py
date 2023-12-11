@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'core',
     'main',
 ]
-SECURE_SSL_REDIRECT = True
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -119,3 +119,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+SECURE_SSL_REDIRECT = True
+PREPEND_WWW = True
+APPEND_SLASH = True
