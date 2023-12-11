@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -74,18 +75,12 @@ WSGI_APPLICATION = 'enaba.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        "URL": "postgres://default:0sCqwVWr7gDK@ep-morning-field-33314033-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb",
-        "USER": "default",
-        "HOST": "ep-morning-field-33314033-pooler.us-east-1.postgres.vercel-storage.com",
-        "PASSWORD": "0sCqwVWr7gDK",
-        "DATABASE": "verceldb",
-        "NAME": "enaba-postgres",
-    }
+        "default": dj_database_url.config(
+            default="postgres://default:0sCqwVWr7gDK@ep-morning-field-33314033.us-east-1.postgres.vercel-storage.com:5432/verceldb", conn_max_age=600
+        )
 }
 
-# Password validation
+#Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
