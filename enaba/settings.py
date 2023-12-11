@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'enaba.wsgi.application'
 
 DATABASES = {
         "default": dj_database_url.config(
-            default="postgres://default:0sCqwVWr7gDK@ep-morning-field-33314033.us-east-1.postgres.vercel-storage.com:5432/verceldb", conn_max_age=600
+            default="postgresql://postgres:AliEnaba983623022@&@db.dfgzsintbeluysvohktz.supabase.co:5432/postgres", conn_max_age=600
         )
 }
 
