@@ -99,9 +99,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-STATIC_URL = 'static/'
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
