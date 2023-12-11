@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'core',
     'main',
 ]
+SECURE_SSL_REDIRECT = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
