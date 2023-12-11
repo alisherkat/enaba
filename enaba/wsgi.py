@@ -8,10 +8,14 @@ https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/
 """
 
 import os
-
+from whitenoise import WhiteNoise
 from django.core.wsgi import get_wsgi_application
+from pathlib import Path
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'enaba.settings')
-
+BASE_DIR = Path(__file__).resolve().parent.parent
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 application = get_wsgi_application()
+application = WhiteNoise(application, root=STATIC_ROOT)
+
 app = application
