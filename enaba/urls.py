@@ -26,3 +26,5 @@ urlpatterns = [
     re_path(r'فهرست/(?P<slug>[^/]+)/$', views.content_view, name="content_view"),
     path('', views.main_page, name="main_page")
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
