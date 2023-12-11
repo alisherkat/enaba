@@ -11,7 +11,7 @@
       "src": "build_files.sh",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "/assets"
+        "distDir": "assets"
       }
     }
   ],
@@ -24,6 +24,5 @@
       "src": "/(.*)",
       "dest": "enaba/wsgi.py"
     }
-  ],
-  "outputDirectory": "/assets"
+  ]
 }
