@@ -82,7 +82,7 @@ DATABASES = {
         "PASSWORD": "0sCqwVWr7gDK",
         "DATABASE": "verceldb",
         'PORT': 5432,
-
+        "NAME": "enaba-postgres",
     }
 }
 
