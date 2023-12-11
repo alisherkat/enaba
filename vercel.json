@@ -3,12 +3,26 @@
       {
         "src": "enaba/wsgi.py",
         "use": "@vercel/python"
+      },
+        {
+            "src": "build_files.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "assets"
       }
+        }
     ],
     "routes": [
       {
         "src": "(./*)",
         "dest": "enaba/wsgi.py"
-      }
+      },
+        {
+
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    }
+            
+        
     ]
 }
