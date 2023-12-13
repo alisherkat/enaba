@@ -22,7 +22,7 @@ from main import views
 from django.utils.encoding import iri_to_uri
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'%s/(?P<slug>[^/]+)/$' %iri_to_uri("زیارت"), views.post_view, name="post_view_zyarat"),
+    re_path(iri_to_uri("زیارت")+r'/(?P<slug>[^/]+)/$', views.post_view, name="post_view_zyarat"),
     re_path(r'post/دعا/(?P<slug>[^/]+)/$', views.post_view, name="post_view_doa"),
     re_path(r'post/فهرست/(?P<slug>[^/]+)/$', views.content_view, name="content_view"),
     path('', views.main_page, name="main_page")
