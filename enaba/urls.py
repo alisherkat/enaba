@@ -19,10 +19,10 @@ from django.urls import path, re_path
 from django.conf import settings
 from django.conf.urls.static import static
 from main import views
-
+from django.utils.encoding import iri_to_uri
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'post/زیارت/(?P<slug>[^/]+)/$', views.post_view, name="post_view_zyarat"),
+    re_path(r'%s/(?P<slug>[^/]+)/$' %iri_to_uri("زیارت"), views.post_view, name="post_view_zyarat"),
     re_path(r'post/دعا/(?P<slug>[^/]+)/$', views.post_view, name="post_view_doa"),
     re_path(r'post/فهرست/(?P<slug>[^/]+)/$', views.content_view, name="content_view"),
     path('', views.main_page, name="main_page")
