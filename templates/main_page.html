@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}
-    انابه سایت جامع ادعیه و زیارات
+      انابه سایت جامع ادعیه و زیارات با خط درشت
 {% endblock %}
 {% block main %}
     <div class="md:flex">
@@ -90,8 +90,8 @@
                 {% for a in amal %}
 
                     <div class="bg-green-300 rounded-full bg-opacity-50 basis-1/5  mx-6 md:mx-8 lg:mx:10 xl:mx-12 my-2 py-1.5 text-center">
-                        <h3><a class="font-lale text-xl no-underline" href="{% url "post_view_amal" a.slug %}">{{ a.title }}</a>
-                        </h3>
+                        <h1><a class="font-lale text-xl no-underline" href="{% url "post_view_amal" a.slug %}">{{ a.title }}</a>
+                        </h1>
                     </div>
 
                 {% endfor %}
