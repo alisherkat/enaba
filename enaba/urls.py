@@ -23,9 +23,11 @@ from main import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'fa/زیارت/(?P<slug>[^/]+)/$', views.post_view, name="post_view_zyarat"),
-    re_path(r'fa/دعا/(?P<slug>[^/]+)/$', views.post_view, name="post_view_doa"),
-    re_path(r'fa/فهرست/(?P<slug>[^/]+)/$', views.content_view, name="content_view"),
+    path(r'زیارت/(?P<slug>[^/]+)/$', views.post_view, name="post_view_zyarat"),
+    re_path(r'دعا/(?P<slug>[^/]+)/$', views.post_view, name="post_view_doa"),
+    re_path(r'اعمال/(?P<slug>[^/]+)/$', views.post_view, name="post_view_aamal"),
+    re_path(r'اسلامی/(?P<slug>[^/]+)/$', views.post_view, name="post_view_islamic"),
+    re_path(r'فهرست/(?P<slug>[^/]+)/$', views.content_view, name="content_view"),
     path('', views.main_page, name="main_page")
 ]
 
