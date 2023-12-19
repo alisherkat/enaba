@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
+
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -40,7 +41,6 @@ INSTALLED_APPS = [
     'main',
 ]
 
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'enaba.urls'
@@ -77,12 +78,13 @@ WSGI_APPLICATION = 'enaba.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-        "default": dj_database_url.config(
-            default="postgresql://postgres:AliEnaba983623022@&@db.dfgzsintbeluysvohktz.supabase.co:5432/postgres", conn_max_age=600
-        )
+    "default": dj_database_url.config(
+        default="postgresql://postgres:AliEnaba983623022@&@db.dfgzsintbeluysvohktz.supabase.co:5432/postgres",
+        conn_max_age=600
+    )
 }
 
-#Password validation
+# Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -100,9 +102,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = BASE_DIR / 'assets'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+    ]
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -113,7 +118,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
