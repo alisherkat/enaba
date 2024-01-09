@@ -16,10 +16,10 @@
                 </div>
 
                 <div class="xl:mb-3.5 md:mb-1">
-                    <h4 class="font-lale text-2xl text-start md:text-3xl lg:text-4xl xl:text-5xl">
+                    <h1 class="font-lale text-2xl text-start md:text-3xl lg:text-4xl xl:text-5xl">
                         فهرست جامع زیارات
 
-                    </h4>
+                    </h1>
 
 
                 </div>
@@ -30,8 +30,8 @@
                 {% for z in zyarat %}
 
                     <div class="bg-amber-300 rounded-full bg-opacity-50 basis-1/5  mx-6 md:mx-8 lg:mx:10 xl:mx-12 my-2 py-1.5 text-center">
-                        <h1><a class="font-lale text-xl no-underline" href="{% url "post_view_zyarat" z.slug %}">{{ z.title }}</a>
-                        </h1>
+                        <h2><a class="font-lale text-xl no-underline" href="{% url "post_view_zyarat" z.slug %}">{{ z.title }}</a>
+                        </h2>
                     </div>
 
                 {% endfor %}
@@ -49,10 +49,10 @@
                 </div>
 
                 <div class="mb-3">
-                    <h4 class="font-lale text-2xl text-start md:text-3xl lg:text-4xl xl:text-5xl">
+                    <h1 class="font-lale text-2xl text-start md:text-3xl lg:text-4xl xl:text-5xl">
                         فهرست جامع ادعیه
 
-                    </h4>
+                    </h1>
 
 
                 </div>
@@ -63,8 +63,8 @@
                 {% for d in doa %}
 
                     <div class="bg-green-300 rounded-full bg-opacity-50 basis-1/5  mx-6 md:mx-8 lg:mx:10 xl:mx-12 my-2 py-1.5 text-center">
-                        <h1><a class="font-lale text-xl no-underline" href="{% url "post_view_doa" d.slug %}">{{ d.title }}</a>
-                        </h1>
+                        <h2><a class="font-lale text-xl no-underline" href="{% url "post_view_doa" d.slug %}">{{ d.title }}</a>
+                        </h2>
                     </div>
 
                 {% endfor %}
@@ -79,10 +79,10 @@
                 </div>
 
                 <div class="md:mb-3">
-                    <h4 class="font-lale text-2xl text-start md:text-3xl lg:text-4xl xl:text-5xl">
+                    <h1 class="font-lale text-2xl text-start md:text-3xl lg:text-4xl xl:text-5xl">
                         فهرست جامع اعمال
 
-                    </h4>
+                    </h1>
 
 
                 </div>
@@ -93,8 +93,8 @@
                 {% for a in amal %}
 
                     <div class="bg-green-300 rounded-full bg-opacity-50 basis-1/5  mx-6 md:mx-8 lg:mx:10 xl:mx-12 my-2 py-1.5 text-center">
-                        <h1><a class="font-lale text-xl no-underline" href="{% url "post_view_amal" a.slug %}">{{ a.title }}</a>
-                        </h1>
+                        <h2><a class="font-lale text-xl no-underline" href="{% url "post_view_amal" a.slug %}">{{ a.title }}</a>
+                        </h2>
                     </div>
 
                 {% endfor %}
