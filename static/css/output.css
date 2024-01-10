@@ -795,10 +795,12 @@ video {
 
 .font-lale {
   font-family: lalezar, sans-serif;
+  font-display: swap;
 }
 
 .font-neirizi {
   font-family: neirizi, sans-serif;
+  font-display: swap;
 }
 
 .text-2xl {
