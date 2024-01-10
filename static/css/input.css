@@ -4,10 +4,12 @@
 
 @font-face {
     font-family: lalezar;
+    font-display: swap;
     src: url("../fonts/Lalezar.woff");
 }
 @font-face {
     font-family: neirizi;
+    font-display: swap;
     src: url("../fonts/Neirizi.woff");
 }
 
