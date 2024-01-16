@@ -10,7 +10,7 @@
         </div>
         {% for p in posts %}
             {% if p.sub_title %}
-                <div class="bg-{{ color }}-100 text-center py-2\.5">
+                <div class="bg-{{ color }}-100 text-center py-2.5">
                     <p class="font-lale text-3xl text-{{ color }}-950 leading-loose">
                         {{ p.sub_title }}
                     </p>
@@ -25,10 +25,10 @@
             {% endif %}
         {% endfor %}
         {% if description %}
-            <div class="bg-{{ color }}-100 text-center py-2\.5">
-                <p class="font-lale text-3xl text-{{ color }}-950 leading-tight font-koodak">
+            <div class="bg-{{ color }}-100 text-center py-3">
+                <pre class="text-3xl text-{{ color }}-950 leading-tight font-koodak">
                     {{ description }}
-                </p>
+                </pre>
             </div>
         {% endif %}
     </main>
