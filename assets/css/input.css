@@ -4,11 +4,20 @@
 
 @font-face {
     font-family: lalezar;
+    font-display: swap;
     src: url("../fonts/Lalezar.woff");
 }
 @font-face {
     font-family: neirizi;
-    src: url("../fonts/Neirizi.woff");
+    font-display: swap;
+    src: url("../fonts/Neirizi.ttf");
+
+}
+@font-face {
+    font-family: koodak;
+    font-display: swap;
+    src: url("../fonts/Koodak.woff");
+
 }
 
 .leading-zyarat{
