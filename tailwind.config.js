@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     fontFamily: {
       'lale': ['lalezar', 'sans-serif'],
-      'neirizi' : ['neirizi','sans-serif']
+      'neirizi' : ['neirizi','sans-serif'],
+      'koodak':['koodak','sans-serif']
     },
     extend: {},
   },

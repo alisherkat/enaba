@@ -10,7 +10,14 @@
 @font-face {
     font-family: neirizi;
     font-display: swap;
-    src: url("../fonts/Neirizi.woff");
+    src: url("../fonts/Neirizi.ttf");
+
+}
+@font-face {
+    font-family: koodak;
+    font-display: swap;
+    src: url("../fonts/Koodak.woff");
+
 }
 
 .leading-zyarat{

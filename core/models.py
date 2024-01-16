@@ -9,6 +9,7 @@ class MainPost(models.Model):
     slug = models.SlugField(allow_unicode=True, null=True, blank=True, unique=True)
     is_zyarat = models.BooleanField(default=True)
     is_not_amal = models.BooleanField(default=True)
+    description = models.TextField(null=True, blank=True)
 
     @property
     def type_post(self):
