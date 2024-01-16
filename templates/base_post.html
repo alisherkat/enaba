@@ -26,9 +26,9 @@
         {% endfor %}
         {% if description %}
             <div class="bg-{{ color }}-100 text-center py-3">
-                <pre class="text-3xl text-{{ color }}-950 leading-tight font-koodak">
-                    {{ description }}
-                </pre>
+                <p class="text-3xl text-{{ color }}-950 leading-tight font-koodak">
+                    {{ description|linebreaks }}
+                </p>
             </div>
         {% endif %}
     </main>
