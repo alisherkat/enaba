@@ -17,16 +17,27 @@ Including another URLconf
 
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
 from django.urls import path, re_path
 
 from enaba import settings
 from main import views
+from main.sitemap import StaticViewSitemap, MainPostSitemap, ContentSitemap
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'post/(?P<slug>[^/]+)/$', views.post_view, name="post_view"),
     re_path(r'content/(?P<slug>[^/]+)/$', views.content_view, name="content_view"),
-    path('', views.main_page, name="main_page")
+    path('', views.main_page, name="main_page"),
+
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns.append(path(
+    "sitemap.xml",
+    sitemap,
+    {"sitemaps": {"posts": MainPostSitemap,
+                  'contents': ContentSitemap,
+                  'main': StaticViewSitemap}},
+    name="django.contrib.sitemaps.views.sitemap",
+))

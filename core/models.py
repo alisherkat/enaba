@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+from django.utils.encoding import iri_to_uri
 from django.utils.text import slugify
 
 
@@ -32,6 +34,7 @@ class MainPost(models.Model):
         super(MainPost, self).save(**kwargs)
 
 
+
 class Post(models.Model):
     sub_title = models.TextField(null=True, blank=True)
     text = models.TextField(null=True, blank=True)
@@ -50,6 +53,8 @@ class Content(models.Model):
 
     def __str__(self):
         return self.title
+
+
 
 
 class ContentPost(models.Model):
