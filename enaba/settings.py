@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'enaba.wsgi.application'
 
 DATABASES = {
     "default": dj_database_url.config(
-        default="postgresql://postgres:AliEnaba983623022@&@db.dfgzsintbeluysvohktz.supabase.co:5432/postgres",
+        default="postgres://postgres.dfgzsintbeluysvohktz:AliEnaba983623022@&@aws-0-eu-central-1.pooler.supabase.com:5432/postgres",
         conn_max_age=600
     )
 }
